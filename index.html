@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Villa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Hot  Wheels</a>
+        <div class="menu-btn"></div>
+
+
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+
+        <video class="video-slide active" src="Ink - 35507.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="Mustang GT - Made with Clipchamp.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="Equilibrium; McLaren 720S - Made with Clipchamp.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="5ENNA; Honda NSX - Made with Clipchamp.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="White Knight; GT-R R35 - Made with Clipchamp.mp4" autoplay muted loop></video>
+
+
+        <div class="content active">
+            <h1>Wonderful.<br><span>Cars</span></h1>
+            <p>A sports car is a car designed with an emphasis on dynamic performance, such as handling, acceleration, top speed, the thrill of driving and racing capability. Sports cars originated in Europe in the early 1900s and are currently produced by many manufacturers around the world.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Mustang.<br><span>GT</span></h1>
+            <p>The 4.6 liter, 281-cubic-inch, 319 hp (238 kW) Ford Shelby GT slotted between the 300 hp (220 kW) Mustang GT and the Ford Shelby GT500. It is essentially a retail sale version of the Hertz rental-only Ford Shelby GT-H, except a manual transmission is available. The Shelby GT was a unique model in that, just like the Shelby Mustangs of the 60s, the Shelby GT's manufacturing was completed at Shelby Automobiles Inc. in Las Vegas, Nevada after being shipped directly there by Ford Motor Company. Shelby GT's were then sold pre-title to customers. By comparison, GT500 models were manufactured solely by Ford Motor Company in Flat Rock, Michigan.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Equilibrium.<br><span>McLaren 720S</span></h1>
+            <p>The McLaren 720S features twin-hinged butterfly doors and many design features from the McLaren F1. The headlights hide air vents that funnel incoming air to two small radiators in front of the wheels. The doors feature air channels that direct air to the engine. The rear of the car features thin LED taillights similar to those on the McLaren P1, and two round exhaust pipes. The design was inspired by the great white shark and features a teardrop-shaped cockpit.All of the exterior features result in an improvement of 50% more downforce than the 650S. The interior of the car includes a folding driver display and carbon fibre accents.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>5ENNA.<br><span>Honda NSX</span></h1>
+            <p>The origins of the NSX trace back to 1984, with the HP-X (Honda Pininfarina eXperimental) concept, which was a mid-engine 3.0 L V6 engine rear wheel drive sports car. Honda committed to the project, with the intention of meeting or exceeding the performance of the then V8 engine Ferrari range, while offering reliability and a lower price point. The concept thus evolved and had its name changed to NS-X, which stood for "New", "Sportscar" "eXperimental", although the production model was launched as the NSX.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>White Knight<br><span>GT-R R35</span></h1>
+            <p>The Nissan GT-R (Japanese: 日産・GT-R, Nissan GT-R), is a high-performance sports car and grand tourer produced by Nissan, unveiled in 2007.[3][4][5] It is the successor to the Skyline GT-R, a high performance variant of the Nissan Skyline. Although this car was the sixth-generation model to bear the GT-R name, the model is no longer part of the Nissan Skyline model line up since that name is now reserved for Nissan's luxury-sport vehicles. The GT-R is built on the exclusively-developed Nissan PM platform, which is an enhanced evolution of the Nissan FM platform used in the separate Nissan Skyline luxury car and the Nissan Z sports car. The GT-R abbreviation stands for Gran Turismo–Racing, obtained from the Skyline GT-R.</p>
+            <a href="#">Read More</a>
+        </div>
+
+
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script type="text/javaScript">
+        //javaScript for video sclid navigator.
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+         btns.forEach((btn) => {
+            btn.classList.remove("active");
+         });
+
+
+         slides.forEach((slide) => {
+            slide.classList.remove("active");
+         });
+
+         contents.forEach((content) => {
+            content.classList.remove("active");
+         });
+
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+
+    </script>
+    
+
+
+    
+</body>
+</html>
